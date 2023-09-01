@@ -33,39 +33,59 @@
                     </div>
                 </div>
             </nav>
-            <div class="pt-2" >
-                <button class="btn btn-dark active" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNorte" aria-expanded="false" aria-controls="collapseNorte" aria-pressed="true">
-                    Sea Ice Concentration - Northern hemisphere
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrows-expand" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 8ZM7.646.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 1.707V5.5a.5.5 0 0 1-1 0V1.707L6.354 2.854a.5.5 0 1 1-.708-.708l2-2ZM8 10a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708L7.5 14.293V10.5A.5.5 0 0 1 8 10Z"/>
-                    </svg>
-                </button>
-                <button class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSur" aria-expanded="false" aria-controls="collapseSur">
-                    Sea Ice Concentration - Southern hemisphere
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrows-expand" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 8ZM7.646.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 1.707V5.5a.5.5 0 0 1-1 0V1.707L6.354 2.854a.5.5 0 1 1-.708-.708l2-2ZM8 10a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708L7.5 14.293V10.5A.5.5 0 0 1 8 10Z"/>
-                    </svg>
-                </button>
-                <button class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNeto" aria-expanded="false" aria-controls="collapseNeto">
-                    Sea Ice Concentration - Net effect
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrows-expand" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 8ZM7.646.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 1.707V5.5a.5.5 0 0 1-1 0V1.707L6.354 2.854a.5.5 0 1 1-.708-.708l2-2ZM8 10a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708L7.5 14.293V10.5A.5.5 0 0 1 8 10Z"/>
-                    </svg>
-                </button>
+            <div class="row pt-2" >
+                <div class="col-2 bg-light border">
+                    <h5 class="pt-1" style="text-align: center;">Sea Ice Concentration</h5>
+                </div>
+                <div class="col">
+                    <button class="btn btn-dark active" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNorte" aria-expanded="true" aria-controls="collapseNorte" aria-pressed="true">
+                        Northern hemisphere evolution
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrows-expand" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 8ZM7.646.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 1.707V5.5a.5.5 0 0 1-1 0V1.707L6.354 2.854a.5.5 0 1 1-.708-.708l2-2ZM8 10a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708L7.5 14.293V10.5A.5.5 0 0 1 8 10Z"/>
+                        </svg>
+                    </button>
+                    <button class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSur" aria-expanded="false" aria-controls="collapseSur">
+                        Southern hemisphere evolution
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrows-expand" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 8ZM7.646.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 1.707V5.5a.5.5 0 0 1-1 0V1.707L6.354 2.854a.5.5 0 1 1-.708-.708l2-2ZM8 10a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708L7.5 14.293V10.5A.5.5 0 0 1 8 10Z"/>
+                        </svg>
+                    </button>
+                    <button class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNetoN" aria-expanded="false" aria-controls="collapseNetoN">
+                        Northern Hemisphere Net effect
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrows-expand" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 8ZM7.646.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 1.707V5.5a.5.5 0 0 1-1 0V1.707L6.354 2.854a.5.5 0 1 1-.708-.708l2-2ZM8 10a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708L7.5 14.293V10.5A.5.5 0 0 1 8 10Z"/>
+                        </svg>
+                    </button>
+                    <button class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNetoS" aria-expanded="false" aria-controls="collapseNetoS">
+                        Southern Hemisphere Net effect
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrows-expand" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 8ZM7.646.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 1.707V5.5a.5.5 0 0 1-1 0V1.707L6.354 2.854a.5.5 0 1 1-.708-.708l2-2ZM8 10a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708L7.5 14.293V10.5A.5.5 0 0 1 8 10Z"/>
+                        </svg>
+                    </button>
+                </div>
             </div>
             <div class="collapse pt-2" id="collapseNorte">
                 <div class="card card-body">
-                    <div id="sicgrafn" style="height:600px; width:100%;"></div>
+                    <div id="sicgrafn" style="height:550px; width:100%;"></div>
                 </div>
             </div>
             <div class="collapse pt-2" id="collapseSur">
                 <div class="card card-body">
-                    <div id="sicgrafs" style="height:600px; width:100%;"></div>
+                    <div id="sicgrafs" style="height:550px; width:100%;"></div>
                 </div>
             </div>
-            <div class="collapse pt-2" id="collapseNeto">
+            <div class="collapse pt-2" id="collapseNetoN">
                 <div class="card card-body">
-
+                    <div class="container">
+                        <div id="sicgrafun" style="height:500px; width:100%;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="collapse pt-2" id="collapseNetoS">
+                <div class="card card-body">
+                    <div class="container">
+                        <div id="sicgrafus" style="height:500px; width:100%;"></div>
+                    </div>
                 </div>
             </div>
         </div>           
