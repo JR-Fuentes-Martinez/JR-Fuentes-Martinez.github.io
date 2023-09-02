@@ -22,49 +22,81 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
         </style>
     </head>
     <body>
-        <div class="container">
-            <div class="card mb-4" style="background-color: #f1f1f1;">
-                <div class="card-body">
-                    <h5 class="card-title">Python script to calculate Sum of Sea Ice Concentration by pole</h5>           
-                    <code>
-                        "import xarray as xr\n" <br>
-                        "import pandas as pa\n" <br>
-                        "da=xr.open_dataset(\"" & RutaFichero & "\", engine = \"netcdf4\")\n" <br>
-                        "da=da[\"ice\"]\n" <br>
-                        "das=da.sel(lat=slice(-90,-45))\n" <br>
-                        "dan=da.sel(lat=slice(45,90))\n" <br>
-                        "das.groupby(\"time\").sum(...)" <br>
-                        "dan.groupby(\"time\").sum(...)") <br>
-                        "da.close()" 
-                    </code>
+
+        <div class="container-fluid">            
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">    
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">DiffSeaIceFront</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                            <a class="nav-link active" aria-current="page" href="code.html">About</a>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="card mb-4" style="background-color: #f1f1f1;">
-                <div class="card-body">
-                    <h5 class="card-title">Routine to get differential values (Gambas 3 Basic)</h5>           
-                    <code>
-                        Dim res As Result  <br>
-                        Dim DiffN As Float <br>
-                        Dim DiffS As Float <br>
-                        <br>
-                        res = $con.Exec("SELECT * FROM main ORDER BY fecha")<br>
-                        Dim RFechas As Date[] = res.All("fecha")<br>
-                        Dim RSifN As Float[] = res.All("sifn")<br>
-                        Dim RSifS As Float[] = res.All("sifs")<br>
-                        <br>
-                        For i As Integer = 1 To RFechas.Max<br>
-                        <br>
-                        &nbsp; DiffN = RSifN[i] - RSifN[i - 1]<br>
-                        &nbsp; DiffS = RSifS[i] - RSifS[i - 1]<br>
-                        <br>
-                        &nbsp; Try $con.Exec("INSERT INTO [&1] VALUES (&2, &3, &4)", "dmain", RFechas[i], DiffN, DiffS)<br>
-                        &nbsp; If Error Then<br>
-                        &nbsp; &nbsp; Print "Error: No se han podido insertar datos calculados en la tabla 'dmain'."<br>
-                        &nbsp; &nbsp; Return <br>
-                        &nbsp; Endif<br>
-                        <br>
-                        Next 
-                    </code>
+            </nav>     
+            <hr>
+            <div class="container">                
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Concept</h5>           
+                        <div class="card-text">
+                            ...
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="card mb-4" style="background-color: #f1f1f1;width: 100%;">
+                            <div class="card-body">
+                                <h5 class="card-title">Python script to calculate Sum of Sea Ice Concentration by pole</h5>           
+                                <code>
+                                    "import xarray as xr\n" <br>
+                                    "import pandas as pa\n" <br>
+                                    "da=xr.open_dataset(\"" & RutaFichero & "\", engine = \"netcdf4\")\n" <br>
+                                    "da=da[\"ice\"]\n" <br>
+                                    "das=da.sel(lat=slice(-90,-45))\n" <br>
+                                    "dan=da.sel(lat=slice(45,90))\n" <br>
+                                    "das.groupby(\"time\").sum(...)" <br>
+                                    "dan.groupby(\"time\").sum(...)") <br>
+                                    "da.close()" 
+                                </code>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="card mb-4" style="background-color: #f1f1f1;width: 100%;">
+                            <div class="card-body">
+                                <h5 class="card-title">Routine to get differential values (Gambas 3 Basic)</h5>           
+                                <code>
+                                    Dim res As Result  <br>
+                                    Dim DiffN As Float <br>
+                                    Dim DiffS As Float <br>
+                                    <br>
+                                    res = $con.Exec("SELECT * FROM main ORDER BY fecha")<br>
+                                    Dim RFechas As Date[] = res.All("fecha")<br>
+                                    Dim RSifN As Float[] = res.All("sifn")<br>
+                                    Dim RSifS As Float[] = res.All("sifs")<br>
+                                    <br>
+                                    For i As Integer = 1 To RFechas.Max<br>
+                                    <br>
+                                    &nbsp; DiffN = RSifN[i] - RSifN[i - 1]<br>
+                                    &nbsp; DiffS = RSifS[i] - RSifS[i - 1]<br>
+                                    <br>
+                                    &nbsp; Try $con.Exec("INSERT INTO [&1] VALUES (&2, &3, &4)", "dmain", RFechas[i], DiffN, DiffS)<br>
+                                    &nbsp; If Error Then<br>
+                                    &nbsp; &nbsp; Print "Error: No se han podido insertar datos calculados en la tabla 'dmain'."<br>
+                                    &nbsp; &nbsp; Return <br>
+                                    &nbsp; Endif<br>
+                                    <br>
+                                    Next 
+                                </code>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
