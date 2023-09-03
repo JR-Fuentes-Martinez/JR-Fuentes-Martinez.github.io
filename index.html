@@ -30,6 +30,8 @@
                         <div class="navbar-nav">
                             <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                             <a class="nav-link active" aria-current="page" href="code.html">About</a>
+                            <a class="nav-link active" aria-current="page" href="code.html">Downloads</a>
+
                         </div>
                     </div>
                 </div>
@@ -39,7 +41,7 @@
                     <h5 class="pt-1" style="text-align: center;">Sea Ice Concentration</h5>
                 </div>
                 <div class="col">
-                    <button class="btn btn-dark active" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNorte" aria-expanded="true" aria-controls="collapseNorte" aria-pressed="true">
+                    <button class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNorte" aria-expanded="true" aria-controls="collapseNorte" aria-pressed="true">
                         Northern hemisphere evolution
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrows-expand" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 8ZM7.646.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 1.707V5.5a.5.5 0 0 1-1 0V1.707L6.354 2.854a.5.5 0 1 1-.708-.708l2-2ZM8 10a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708L7.5 14.293V10.5A.5.5 0 0 1 8 10Z"/>
@@ -65,7 +67,7 @@
                     </button>
                 </div>
             </div>
-            <div class="collapse pt-2" id="collapseNorte">
+            <div class="collapse pt-2 active show" id="collapseNorte">
                 <div class="card card-body">
                     <div id="sicgrafn" style="height:550px; width:100%;"></div>
                 </div>
@@ -91,9 +93,8 @@
             </div>
         </div>           
         <hr>
-        <footer>
-            <p style="padding-left: 30px">&copy2023; J.R.Fuentes Martinez&nbsp;&nbsp;&nbsp;<strong>Data</strong>: www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr Datasets
-            &nbsp;&nbsp;&nbsp;MIT Licencing.</p>
+        <footer class="fixed-bottom text-light font-weight-light bg-dark">
+            <p class="pt-3" style="text-align: center">&copy;2023 J.R.Fuentes Martinez (MIT Licencing)&nbsp;&nbsp;&nbsp;&nbsp;<strong>Data</strong>: www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr Datasets.</p>
         </footer>   
         <!-- <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>comment -->
         <script src="js/vendor/bootstrap.min.js"></script>

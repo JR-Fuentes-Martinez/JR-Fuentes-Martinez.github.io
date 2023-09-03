@@ -100,21 +100,28 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
                     <div class="col-6">
                         <div class="card mb-4" style="background-color: #f1f1f1;width: 100%;">
                             <div class="card-body">
-                                <h5 class="card-title">Routine to get differential values (Gambas 3 Basic)</h5>           
+                                <h5 class="card-title">Routine to get differential values (Gambas 3 Basic)</h5>
+                                <p class="card-subtittle">Note: Possible spurious values are normalizaed to the previous one.</p>
                                 <code>
                                     Dim res As Result  <br>
                                     Dim DiffN As Float <br>
                                     Dim DiffS As Float <br>
+                                    Dim ADiffN As Float <br>
+                                    Dim ADiffS As Float <br>
                                     <br>
                                     res = $con.Exec("SELECT * FROM main ORDER BY fecha")<br>
                                     Dim RFechas As Date[] = res.All("fecha")<br>
                                     Dim RSifN As Float[] = res.All("sifn")<br>
                                     Dim RSifS As Float[] = res.All("sifs")<br>
+                                    ADiffN = RSifN[0] <br>
+                                    ADiffS = RSifS[0] <br>
                                     <br>
                                     For i As Integer = 1 To RFechas.Max<br>
                                     <br>
                                     &nbsp; DiffN = RSifN[i] - RSifN[i - 1]<br>
+                                    &nbsp; If DiffN > 1000 Or DiffN < -1000 Then DiffN = ADiffN <br>
                                     &nbsp; DiffS = RSifS[i] - RSifS[i - 1]<br>
+                                    &nbsp; If DiffS > 1000 Or DiffS < -1000 Then DiffS = ADiffS <br>
                                     <br>
                                     &nbsp; Try $con.Exec("INSERT INTO [&1] VALUES (&2, &3, &4)", "dmain", RFechas[i], DiffN, DiffS)<br>
                                     &nbsp; If Error Then<br>
@@ -122,8 +129,12 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
                                     &nbsp; &nbsp; Return <br>
                                     &nbsp; Endif<br>
                                     <br>
+                                    &nbsp; ADiffN = DiffN <br>
+                                    &nbsp; ADiffS = DiffS <br>
+                                    <br>
                                     Next 
                                 </code>
+                                
                             </div>
                         </div>
                     </div>
